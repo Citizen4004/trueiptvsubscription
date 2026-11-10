@@ -53,7 +53,9 @@
         { "@type": "Question", "name": "My internet is fast, so why is IPTV still buffering?", "acceptedAnswer": { "@type": "Answer", "text": "A fast overall connection doesn't guarantee a stable stream. Wi-Fi interference, a congested router, or your device's own processing power can all cause buffering independently of your internet speed." } },
         { "@type": "Question", "name": "Should I use a VPN to stop buffering?", "acceptedAnswer": { "@type": "Answer", "text": "A VPN won't fix buffering caused by your own network, and on some connections it adds latency that makes things worse. Only worth adding if you have a specific reason to." } },
         { "@type": "Question", "name": "Could the provider be the cause instead of my setup?", "acceptedAnswer": { "@type": "Answer", "text": "Occasionally, yes. Overloaded provider servers can cause buffering no matter how good your own setup is. A good support team can usually tell you if that's what's happening." } },
-        { "@type": "Question", "name": "Does low storage on my streaming device cause buffering?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Firestick, Android TV boxes, and Smart TVs all cache data while you watch, and low storage slows that process down enough to cause stuttering even on a strong connection." } }
+        { "@type": "Question", "name": "Does low storage on my streaming device cause buffering?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Firestick, Android TV boxes, and Smart TVs all cache data while you watch, and low storage slows that process down enough to cause stuttering even on a strong connection." } },
+        { "@type": "Question", "name": "Does restarting my router actually help?", "acceptedAnswer": { "@type": "Answer", "text": "More often than people expect. Routers accumulate small amounts of congestion and memory buildup over days of uptime, and a restart clears both, which can noticeably improve stream stability." } },
+        { "@type": "Question", "name": "Does the time of day affect buffering?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Evenings and weekends tend to be the busiest hours for home networks and ISP infrastructure generally, so buffering limited to those times usually points to congestion." } }
       ]
     }
   ]
@@ -111,8 +113,14 @@
       <h2>Switch your DNS</h2>
       <p>Your router's default DNS, often your ISP's own, can be slow enough to add noticeable delay before a stream starts, which looks a lot like buffering right when you change channels. Pointing your device or router at a faster public DNS like 1.1.1.1 or 8.8.8.8 takes a couple of minutes and sometimes makes a real difference, especially if it's the start of playback that's slow rather than the video itself stuttering mid-stream.</p>
 
+      <h2>Check for an overheating device</h2>
+      <p>Streaming boxes and sticks tucked behind a TV in a closed cabinet can run hotter than expected, and most will throttle performance once internal temperatures climb too high. If buffering tends to show up more after the device has been running for a while, try giving it a bit of open air and see if the pattern changes. It's a less common cause, but an easy one to rule out.</p>
+
       <h2>What about during a huge live event?</h2>
       <p>If buffering specifically spikes during a major game or breaking news, that's a different, separate problem from everyday buffering. A large audience watching at once puts real strain on ISP infrastructure in your area, not just inside your own home network, so there isn't really a device-side fix. A wired connection and closing other bandwidth-heavy activity before it starts is about as much as you can control.</p>
+
+      <h2>Rule out your streaming app's cache</h2>
+      <p>Player apps build up a local cache of channel logos, guide data, and playback settings over time, and on some devices that cache can get large enough to slow the app down in ways that look like buffering but are really just the app itself struggling to keep up. Most player apps have a clear-cache option tucked into their settings, and on Android-based devices you can also clear it from the system app manager. It's a reasonable step to try if buffering has been gradually getting worse over weeks rather than showing up suddenly.</p>
 
       <h2>Quick reference</h2>
       <table>
@@ -122,8 +130,12 @@
           <tr><td>Every channel buffers</td><td>Your internet connection or Wi-Fi signal</td></tr>
           <tr><td>Worse in the evenings or on weekends</td><td>Network congestion from peak household or ISP traffic</td></tr>
           <tr><td>Fine on one device, bad on another</td><td>That device's processing power or app settings</td></tr>
+          <tr><td>Gets worse the longer it's been running</td><td>Device overheating, check ventilation</td></tr>
         </tbody>
       </table>
+
+      <h2>When it's worth replacing your router</h2>
+      <p>If your router is more than four or five years old and you've worked through everything above with no real improvement, the router itself might simply be underpowered for modern streaming demands, especially if several devices in the house are active at once. Older routers were often designed around far lighter household internet use than a 4K IPTV stream plus phones, laptops, and smart home devices all sharing the same connection. It's not the first thing to try, but it's a legitimate cause worth considering once the more common fixes have been ruled out.</p>
 
       <div class="callout">
         <p>Still stuck after going through this list? Message our team on WhatsApp with your device and what you've already tried, we'll help you track down the actual cause.</p>
@@ -138,6 +150,10 @@
       <p>Occasionally, yes. Overloaded provider servers can cause buffering no matter how good your own setup is. A good support team can usually tell you if that's what's happening.</p>
       <h3>Does low storage on my streaming device cause buffering?</h3>
       <p>Yes. Firestick, Android TV boxes, and Smart TVs all cache data while you watch, and low storage slows that process down enough to cause stuttering even on a strong connection.</p>
+      <h3>Does restarting my router actually help?</h3>
+      <p>More often than people expect. Routers accumulate small amounts of congestion and memory buildup over days of uptime, and a restart clears both, which can noticeably improve stream stability.</p>
+      <h3>Does the time of day affect buffering?</h3>
+      <p>Yes. Evenings and weekends tend to be the busiest hours for both home networks and ISP infrastructure in general, so buffering that only shows up at those times usually points to congestion rather than anything wrong with your setup.</p>
 
       <div class="post-footer-cta">
         <h3>Need a hand troubleshooting?</h3>
