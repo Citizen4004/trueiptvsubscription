@@ -1,0 +1,12 @@
+{
+  "name": "True IPTV Subscription",
+  "short_name": "True IPTV",
+  "description": "IPTV subscription streaming live channels plus Movies & TV Shows.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#4f46e5",
+  "icons": [
+    { "src": "/images/icons/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

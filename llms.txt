@@ -1,0 +1,25 @@
+# True IPTV Subscription
+
+> True IPTV Subscription is an IPTV subscription service offering live TV channels (Sports, News, Kids, Local) plus a curated library of Movies & TV Shows (VOD), in 4K and Full HD, with a free 24-hour trial, a program guide (EPG), 24/7 WhatsApp support, and a pay-only-after-confirmed-working model. Plans range from 1 to 12 months, supporting 1-5 simultaneous devices (more available on request). Operated by the team behind TruWave TV.
+
+## Key pages
+
+- [Home](https://trueiptvsubscription.com/): overview, channel categories, pricing, FAQ
+- [Plans](https://trueiptvsubscription.com/plans/): pricing by term (1/3/6/12 months), multi-device pricing
+- [Apps](https://trueiptvsubscription.com/apps/): comparison of compatible player apps
+- [Devices](https://trueiptvsubscription.com/devices/): device compatibility guide
+- [Guides](https://trueiptvsubscription.com/guides/): setup and troubleshooting guides
+
+## Setup guides
+
+- [How to Install IPTV on Firestick](https://trueiptvsubscription.com/guides/how-to-install-iptv-on-firestick.html)
+- [How to Set Up TiviMate](https://trueiptvsubscription.com/guides/how-to-set-up-tivimate.html)
+- [How to Set Up IPTV Smarters Pro](https://trueiptvsubscription.com/guides/how-to-set-up-iptv-smarters-pro.html)
+
+## Troubleshooting
+
+- [IPTV Keeps Buffering? Here's the Fix](https://trueiptvsubscription.com/guides/fix-iptv-buffering.html)
+
+## Contact
+
+WhatsApp: +1 209 755 9199 (24/7 support, free 24-hour trial requests)
