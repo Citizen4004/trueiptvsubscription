@@ -54,11 +54,11 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "My IPTV worked fine yesterday and now it doesn't. What changed?", "acceptedAnswer": { "@type": "Answer", "text": "Often nothing you did. A brief provider-side maintenance window, an ISP hiccup, or an overnight app update resetting a setting are the three most common causes when nothing on your end actually changed. Give it 15 to 20 minutes and retry before assuming it's serious." } },
-        { "@type": "Question", "name": "How do I tell if the problem is my internet or the subscription?", "acceptedAnswer": { "@type": "Answer", "text": "Run a speed test on the exact device giving you trouble. Normal speed but IPTV still won't load points to the app or the subscription. Noticeably slow speed, or other sites being sluggish too, points to your connection." } },
-        { "@type": "Question", "name": "It only happens on wifi, not on ethernet. Is my subscription broken?", "acceptedAnswer": { "@type": "Answer", "text": "No, that pattern specifically points at your wifi setup, since a wired connection skips wifi entirely and still works fine. Try the other frequency band, move closer to the router, and check if a VPN is active." } },
-        { "@type": "Question", "name": "One channel is broken but everything else plays fine. What's wrong?", "acceptedAnswer": { "@type": "Answer", "text": "This is almost always a single feed issue on the provider side, not your device or account. Message support with the exact channel name so it can be checked and reported upstream." } },
-        { "@type": "Question", "name": "I've tried restarting everything and it's still broken. What now?", "acceptedAnswer": { "@type": "Answer", "text": "Stop guessing and message support directly, with your device, your app, and exactly what you've already tried. That gets you a targeted answer instead of repeating basic steps that already didn't work." } }
+        { "@type": "Question", "name": "My IPTV worked fine yesterday and now it doesn't. What changed?", "acceptedAnswer": { "@type": "Answer", "text": "Probably nothing on your side. Server maintenance, a brief ISP hiccup, or a firmware update quietly flipping a setting back are the usual culprits when you genuinely haven't touched anything. Wait it out for fifteen or twenty minutes before treating it as a real problem." } },
+        { "@type": "Question", "name": "How do I tell if the problem is my internet or the subscription?", "acceptedAnswer": { "@type": "Answer", "text": "Speed-test whichever device is actually struggling. A normal result with IPTV still refusing to load points to the app or the subscription. A bad result, or other sites crawling too, points straight at your connection." } },
+        { "@type": "Question", "name": "It only happens on wifi, not on ethernet. Is my subscription broken?", "acceptedAnswer": { "@type": "Answer", "text": "Your subscription is fine, this is a wifi issue specifically, which is exactly why plugging in a cable sidesteps it entirely. Switching bands, getting closer to the router, and ruling out an active VPN are the fixes worth trying first." } },
+        { "@type": "Question", "name": "One channel is broken but everything else plays fine. What's wrong?", "acceptedAnswer": { "@type": "Answer", "text": "That's isolated to one feed on the provider's side, nothing about your device or account. Report the specific channel name so it gets flagged upstream." } },
+        { "@type": "Question", "name": "I've tried restarting everything and it's still broken. What now?", "acceptedAnswer": { "@type": "Answer", "text": "At that point, more restarting isn't going to help. Send support the device, the app, and what you've already tried, that's what turns a slow back-and-forth into one useful reply." } }
       ]
     }
   ]
@@ -93,7 +93,7 @@
       <p class="dek">"It's not working" could mean five different things, and each one has a different fix. Rather than working through every possible cause, find the description below that matches what you're actually seeing and skip straight to the real fix.</p>
 
       <h2>First, rule out your connection</h2>
-      <p>Before anything else, run a speed test on the same device that's having trouble, not a different one. If the result is well below what you normally get, or other apps and websites are also crawling, that's your internet, not IPTV. Unplug your router for 30 seconds, plug it back in, let it fully reconnect, then close and reopen the app. That one combination clears up a large share of reported problems on its own.</p>
+      <p>Start by speed-testing the actual device that's struggling, since testing a different one tells you nothing useful. A number that's clearly lower than usual, or other apps acting sluggish too, means the problem lives in your connection, not in IPTV. From there, a full router power cycle (unplugged for a real 30 seconds, not 5) followed by force-closing and reopening the app resolves a surprising share of everything else on this page by itself.</p>
 
       <h2>"The picture keeps freezing or breaking up"</h2>
       <p>Channel loads, but playback stutters or pixelates. That's a bandwidth or network-stability symptom almost every time. We've laid out the full diagnostic, including the specific decode-mode and wifi-band settings that tend to cause it, in our <a href="/guides/fix-iptv-buffering.html">buffering fix guide</a>.</p>
@@ -108,13 +108,13 @@
       <p>Playback working while the on-screen guide is empty or shows incorrect times is its own, smaller category of problem, almost always a sync issue with the guide data specifically. Our <a href="/guides/iptv-epg-not-working.html">program guide troubleshooting page</a> covers the fix, including what's different in TiviMate versus IPTV Smarters Pro.</p>
 
       <h2>"Nothing changed on my end, but it stopped working anyway"</h2>
-      <p>When you genuinely haven't changed anything, the cause usually sits outside your control and typically resolves on its own. A short provider-side maintenance window can briefly interrupt streams. An automatic app or firmware update, especially on MAG and Formuler boxes, can quietly reset a setting overnight. ISPs occasionally throttle streaming-type traffic during busy evening hours even while your general connection tests fine. Give it 15 to 20 minutes before assuming anything needs fixing.</p>
+      <p>If nothing on your end actually changed, the cause is almost certainly something passing rather than permanent. A maintenance window on the provider's side, a firmware update quietly resetting a device setting overnight (MAG and Formuler boxes do this more than most), or an ISP leaning on streaming traffic specifically during a busy evening, none of these show up in a basic connection test, and all of them tend to clear up within twenty minutes without you doing anything at all.</p>
 
       <h2>"It's only on wifi" or "it's only on one device"</h2>
       <p>The pattern itself tells you where to look. Works on ethernet but not wifi: that's your router, not your subscription, try the other frequency band (2.4GHz reaches further but gets crowded, 5GHz is faster but drops off with distance), move closer to the router, and check whether a VPN is running, since some configurations interfere with streaming specifically. Works on your phone but not your TV box: that's local to that device's app, clear its cache, confirm it's updated, and if it's a Firestick or Android box, check it isn't nearly out of storage, a cramped device behaves exactly like this.</p>
 
       <div class="callout">
-        <p>Matched your symptom above and still stuck? Message our support team on WhatsApp with your exact device, app, and what you've already tried. The more specific the report, the faster we can actually help.</p>
+        <p>Found your symptom above but it's still not fixed? Tell support on WhatsApp exactly which device and app you're on and what you've already tried, the more specific that message is, the faster you get an actual answer back.</p>
       </div>
 
       <h2>When to stop troubleshooting and just ask</h2>
@@ -128,19 +128,19 @@
 
       <h2>Frequently asked questions</h2>
       <h3>My IPTV worked fine yesterday and now it doesn't. What changed?</h3>
-      <p>Often nothing you did. A brief provider-side maintenance window, an ISP hiccup, or an overnight app update resetting a setting are the three most common causes when nothing on your end actually changed. Give it 15 to 20 minutes and retry before assuming it's serious.</p>
+      <p>Probably nothing on your side. Server maintenance, a brief ISP hiccup, or a firmware update quietly flipping a setting back are the usual culprits when you genuinely haven't touched anything. Wait it out for fifteen or twenty minutes before treating it as a real problem.</p>
       <h3>How do I tell if the problem is my internet or the subscription?</h3>
-      <p>Run a speed test on the exact device giving you trouble. Normal speed but IPTV still won't load points to the app or the subscription. Noticeably slow speed, or other sites being sluggish too, points to your connection.</p>
+      <p>Speed-test whichever device is actually struggling. A normal result with IPTV still refusing to load points to the app or the subscription. A bad result, or other sites crawling too, points straight at your connection.</p>
       <h3>It only happens on wifi, not on ethernet. Is my subscription broken?</h3>
-      <p>No, that pattern specifically points at your wifi setup, since a wired connection skips wifi entirely and still works fine. Try the other frequency band, move closer to the router, and check if a VPN is active.</p>
+      <p>Your subscription is fine, this is a wifi issue specifically, which is exactly why plugging in a cable sidesteps it entirely. Switching bands, getting closer to the router, and ruling out an active VPN are the fixes worth trying first.</p>
       <h3>One channel is broken but everything else plays fine. What's wrong?</h3>
-      <p>This is almost always a single feed issue on the provider side, not your device or account. Message support with the exact channel name so it can be checked and reported upstream.</p>
+      <p>That's isolated to one feed on the provider's side, nothing about your device or account. Report the specific channel name so it gets flagged upstream.</p>
       <h3>I've tried restarting everything and it's still broken. What now?</h3>
-      <p>Stop guessing and message support directly, with your device, your app, and exactly what you've already tried. That gets you a targeted answer instead of repeating basic steps that already didn't work.</p>
+      <p>At that point, more restarting isn't going to help. Send support the device, the app, and what you've already tried, that's what turns a slow back-and-forth into one useful reply.</p>
 
       <div class="post-footer-cta">
         <h3>Still not fixed?</h3>
-        <p>Message our support team directly on WhatsApp with your device and app, and we'll take it from there.</p>
+        <p>Tell support your device and app on WhatsApp and we'll pick it up from there.</p>
         <a class="btn btn-primary" href="https://wa.me/12097559199?text=Hi%21%20My%20IPTV%20isn%27t%20working%20and%20I%27d%20like%20help%20figuring%20out%20why." rel="noopener" target="_blank">Chat on WhatsApp</a>
       </div>
 

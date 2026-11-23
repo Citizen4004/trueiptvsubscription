@@ -52,9 +52,9 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "Why can't I just paste my M3U link into Plex?", "acceptedAnswer": { "@type": "Answer", "text": "Plex's Live TV & DVR feature is designed around physical HDHomeRun tuner hardware, not internet M3U or Xtream Codes playlists, so there's no official field anywhere in Plex for that kind of link. Unofficial third-party tools can bridge a playlist into something Plex's tuner system will accept, but that's extra software to install and maintain, not something built into Plex itself." } },
-        { "@type": "Question", "name": "What's the simplest IPTV option for someone who uses Plex for movies?", "acceptedAnswer": { "@type": "Answer", "text": "Jellyfin, since it's a similar unified media-library experience but built with IPTV support natively, no bridge software required." } },
-        { "@type": "Question", "name": "Do I need the EPG link, or does the playlist alone work?", "acceptedAnswer": { "@type": "Answer", "text": "The playlist alone gets channels playing. The XMLTV guide URL is what fills in program names and times. Both Kodi and Jellyfin work fine without it, you'll just have channels with no schedule data." } }
+        { "@type": "Question", "name": "Why doesn't Plex have a spot for my M3U link?", "acceptedAnswer": { "@type": "Answer", "text": "Because Plex's Live TV was built around real tuner hardware picking up actual broadcast signals, an internet playlist was never part of that design, so no field for it exists anywhere in the app. Getting around it means installing a separate unofficial tool that tricks Plex into seeing a virtual tuner." } },
+        { "@type": "Question", "name": "I'm already a Plex user, what's the easiest alternative for live channels?", "acceptedAnswer": { "@type": "Answer", "text": "Jellyfin is the natural fit, it gives you that same one-app library feeling Plex does, except IPTV is built in from the start rather than needing a workaround." } },
+        { "@type": "Question", "name": "Can I skip the EPG link and just use the playlist?", "acceptedAnswer": { "@type": "Answer", "text": "You can, channels will still play. What you'd be missing is the XMLTV guide data that labels each program with its name and time, neither Kodi nor Jellyfin requires it to function." } }
       ]
     }
   ]
@@ -89,45 +89,45 @@
       <p class="dek">If your movies and shows already live in Kodi or Jellyfin, you don't need a separate app just for live channels, both can take an IPTV playlist directly. Plex is the exception here, and it's worth knowing why before you waste an evening trying to make it work.</p>
 
       <h2>Setting up Kodi</h2>
-      <p>Kodi's live TV support comes from an addon called PVR IPTV Simple Client. It ships with Kodi already but sits switched off until you turn it on.</p>
+      <p>The piece doing the actual work in Kodi is an addon called PVR IPTV Simple Client, bundled in but dormant until you flip it on yourself.</p>
       <ol>
-        <li>Open <strong>Settings → Add-ons → My add-ons → PVR clients</strong> and select <strong>PVR IPTV Simple Client</strong>.</li>
-        <li>Toggle it on, then tap its configuration icon.</li>
-        <li>On the <strong>General</strong> tab, paste your M3U playlist URL into the M3U Play List URL field.</li>
-        <li>On the <strong>EPG Settings</strong> tab, add your XMLTV URL so the program guide populates.</li>
-        <li>Confirm and restart Kodi. Open the <strong>TV</strong> tab and channels should load within a minute or so.</li>
+        <li>Head into <strong>Settings → Add-ons → My add-ons → PVR clients</strong> and pick <strong>PVR IPTV Simple Client</strong> from the list.</li>
+        <li>Flip the toggle to turn it on, then tap through into its own settings.</li>
+        <li>Under the <strong>General</strong> tab is where your M3U playlist URL goes, drop it into the M3U Play List URL field.</li>
+        <li>Switch to <strong>EPG Settings</strong> and add the XMLTV URL there too, that's what builds out the program guide.</li>
+        <li>Save and restart Kodi, then head to the <strong>TV</strong> tab, your channels should be there within a minute.</li>
       </ol>
-      <p>Nothing showing up after restarting is almost always a copy-paste issue with the playlist URL, check that the whole link made it in without getting cut off.</p>
+      <p>If the channel list comes up empty after a restart, it's almost always because the playlist URL got cut off mid-paste, go back and confirm the entire link copied over cleanly.</p>
 
       <h2>Setting up Jellyfin</h2>
-      <p>Jellyfin builds Live TV directly into its dashboard, so there's no addon to track down first.</p>
+      <p>Jellyfin handles this differently, Live TV is a native dashboard feature rather than something bolted on through an addon.</p>
       <ol>
-        <li>Open the Jellyfin dashboard and click <strong>Live TV</strong> in the sidebar.</li>
-        <li>Under <strong>Tuner Devices</strong>, add a new tuner and select <strong>M3U Tuner</strong>.</li>
-        <li>Paste in your playlist URL.</li>
-        <li>Under <strong>TV Guide Data Providers</strong>, add your XMLTV URL for program listings.</li>
-        <li>Give it a minute or two to scan and import, larger channel lists take a bit longer the first time.</li>
+        <li>From the Jellyfin dashboard, click into <strong>Live TV</strong> on the sidebar.</li>
+        <li>Find <strong>Tuner Devices</strong> and create a new one, choosing <strong>M3U Tuner</strong> as its type.</li>
+        <li>Drop your playlist URL into the field it gives you.</li>
+        <li>Over in <strong>TV Guide Data Providers</strong>, the XMLTV URL goes here to pull in the actual program listings.</li>
+        <li>Let it run its scan, a bigger channel list just means a slightly longer wait the first time through.</li>
       </ol>
-      <p>Once it's done, live channels show up alongside your existing movie and show library instead of in a separate app.</p>
+      <p>From that point on, live channels sit right next to your existing movies and shows instead of needing their own separate app.</p>
 
-      <h2>Why Plex is the odd one out</h2>
-      <p>Plex built its Live TV &amp; DVR feature around physical HDHomeRun tuner hardware picking up broadcast signals, not around internet playlists. There's no setting inside Plex where an M3U URL or an Xtream Codes login goes, the way there is in Kodi or Jellyfin. A few unofficial community tools exist that create a virtual tuner Plex can see and feed your playlist through it, but that's another piece of software on top of your subscription to install, configure, and keep updated, and it isn't something our support team can troubleshoot for you. If staying inside one unified library matters to you the way it does with Plex, Jellyfin gets you the closest to that experience with IPTV actually supported out of the box.</p>
+      <h2>Why Plex can't do this the same way</h2>
+      <p>Plex designed Live TV &amp; DVR around physical HDHomeRun tuner hardware pulling in broadcast signals, not around a link to an internet playlist, so unlike Kodi or Jellyfin, there's genuinely nowhere in the app to paste an M3U or Xtream Codes URL. A handful of community-built tools fake a tuner Plex will recognize and pipe your playlist through it instead, but that's a separate piece of software you'd be responsible for installing and maintaining on your own, our support team has no way to troubleshoot it for you. For anyone who specifically wants that one-library feel Plex is known for, Jellyfin is the closer match since it treats live channels as a first-class citizen rather than something requiring a workaround.</p>
 
       <div class="callout">
         <p>Need your playlist and EPG link to try either of these? Message us on WhatsApp and we'll send both over.</p>
       </div>
 
       <h2>Frequently asked questions</h2>
-      <h3>Why can't I just paste my M3U link into Plex?</h3>
-      <p>Plex's Live TV &amp; DVR feature is designed around physical HDHomeRun tuner hardware, not internet M3U or Xtream Codes playlists, so there's no official field anywhere in Plex for that kind of link. Unofficial third-party tools can bridge a playlist into something Plex's tuner system will accept, but that's extra software to install and maintain, not something built into Plex itself.</p>
-      <h3>What's the simplest IPTV option for someone who uses Plex for movies?</h3>
-      <p>Jellyfin, since it's a similar unified media-library experience but built with IPTV support natively, no bridge software required.</p>
-      <h3>Do I need the EPG link, or does the playlist alone work?</h3>
-      <p>The playlist alone gets channels playing. The XMLTV guide URL is what fills in program names and times. Both Kodi and Jellyfin work fine without it, you'll just have channels with no schedule data.</p>
+      <h3>Why doesn't Plex have a spot for my M3U link?</h3>
+      <p>Because Plex's Live TV was built around real tuner hardware picking up actual broadcast signals, an internet playlist was never part of that design, so no field for it exists anywhere in the app. Getting around it means installing a separate unofficial tool that tricks Plex into seeing a virtual tuner, extra software outside of Plex itself.</p>
+      <h3>I'm already a Plex user, what's the easiest alternative for live channels?</h3>
+      <p>Jellyfin is the natural fit, it gives you that same one-app library feeling Plex does, except IPTV is built in from the start rather than needing a workaround.</p>
+      <h3>Can I skip the EPG link and just use the playlist?</h3>
+      <p>You can, channels will still play. What you'd be missing is the XMLTV guide data that labels each program with its name and time, neither Kodi nor Jellyfin requires it to function.</p>
 
       <div class="post-footer-cta">
         <h3>Ready to get set up?</h3>
-        <p>Start your free trial and we'll send your playlist and EPG links for Kodi, Jellyfin, or any other app you use.</p>
+        <p>Message us and we'll hand you the playlist and EPG links, whether you're on Kodi, Jellyfin, or something else entirely.</p>
         <a class="btn btn-primary" href="https://wa.me/12097559199?text=Hi%21%20I%27d%20like%20help%20setting%20up%20IPTV%20on%20Kodi%20or%20Jellyfin." rel="noopener" target="_blank">Chat on WhatsApp</a>
       </div>
 
